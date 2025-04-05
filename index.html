@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome</title>
+  <style>
+    body {
+      background-color: black;
+      color: rgb(193, 29, 116);
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      background: white;
+      color: rgb(193, 29, 116);
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: rgb(193, 29, 116);
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello, you have been chosen for this special task.</h1>
+  <p>Do you accept this challenge?</p>
+  <button onclick="location.href='clue1.html'">Yes</button>
+  <button onclick="noClick()">No</button>
+
+  <script>
+    const messages = [
+      "Are you sure?",
+      "Really?",
+      "Do you really want to anger Zeus and make him shock you with lightning through your laptop?"
+    ];
+    let index = 0;
+    function noClick() {
+      if (index < messages.length) {
+        alert(messages[index]);
+        index++;
+      } else {
+        alert("Too late... ⚡");
+      }
+    }
+  </script>
+</body>
+</html>
