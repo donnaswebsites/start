@@ -25,19 +25,19 @@
 <body>
   <h1>Final Clue:</h1>
   <p>Decipher this code:</p>
-  <p>.... .- .--. .--. -.-- / ... .. -..- / -- --- -. - .... ... / .. / .-.. --- ...- . / -.-- --- ..-</p>
+  <p>.... .- .--. .--. -.-- / ..-. .. ...- . / -- --- -. - .... ... / .. / .-.. --- ...- . / -.-- --- ..-</p>
   <input id="answer" placeholder="Type your answer" />
   <button onclick="checkAnswer()">Submit</button>
   <p id="feedback"></p>
   <div id="cat" style="display: none;">
-    <p>🥳 Happy Six Months! I love you 🩷</p>
+    <p>🥳 Happy Five Months! I love you 🩷</p>
     <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Jumping cat" />
   </div>
 
   <script>
     function checkAnswer() {
       const answer = document.getElementById('answer').value.toLowerCase();
-      if (answer === "happy six months i love you") {
+      if (answer === "happy five months i love you") {
         document.getElementById('feedback').textContent = "";
         document.getElementById('cat').style.display = "block";
       } else {
