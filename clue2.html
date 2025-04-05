@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clue 2</title>
+  <style>
+    body {
+      background-color: black;
+      color: rgb(193, 29, 116);
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    input, button {
+      margin-top: 20px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>What is my nickname for you?</h1>
+  <input id="answer" placeholder="Type your answer" />
+  <button onclick="checkAnswer()">Submit</button>
+  <p id="feedback"></p>
+
+  <script>
+    function checkAnswer() {
+      const answer = document.getElementById('answer').value.toLowerCase();
+      if (answer === "vernier caliper") {
+        document.getElementById('feedback').textContent = "Good job!";
+        setTimeout(() => window.location.href = "clue3.html", 1000);
+      } else {
+        document.getElementById('feedback').textContent = "Try again!";
+      }
+    }
+  </script>
+</body>
+</html>
