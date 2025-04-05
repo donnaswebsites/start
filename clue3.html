@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clue 3</title>
+  <style>
+    body {
+      background-color: black;
+      color: rgb(193, 29, 116);
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    input, button {
+      margin-top: 20px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Decipher this:</h1>
+  <p>01001001 00100000 01101100 01101111 01110110 01100101 00100000 01111001 01101111 01110101</p>
+  <input id="answer" placeholder="Type your answer" />
+  <button onclick="checkAnswer()">Submit</button>
+  <p id="feedback"></p>
+
+  <script>
+    function checkAnswer() {
+      const answer = document.getElementById('answer').value.toLowerCase();
+      if (answer === "i love you") {
+        document.getElementById('feedback').textContent = "I love you too ❤️";
+        setTimeout(() => window.location.href = "clue4.html", 1000);
+      } else {
+        document.getElementById('feedback').textContent = "Try again!";
+      }
+    }
+  </script>
+</body>
+</html>
